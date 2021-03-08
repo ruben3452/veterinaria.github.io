@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/v4-shims.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Mascotas</title>
+  </head>
+  <body>
+    
+   
+      <!-- inicio nav capitulo 84-->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Veterinaria</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="mascotas.html">Mascotas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="veterinarias.html">Veterinari@s</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="consultas.html">Consultas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="duenos.html">Dueñ@s</a>
+              </li>
+            </div>
+            
+
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-light" type="submit">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      
+    
+      <!-- fin nav -->
+    
+      <div class="container">
+    <div class="actions-menu">
+      
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="assets/img/img1.jpg" alt="Primera slide">
+            <div class="carousel-caption">
+              <h3>Mascotas</h3>
+              <p>Respetar a los animales es una obligación.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="assets/img/img2.png" alt="Segunda slide">
+            <div class="carousel-caption">
+              <h3>Mascotas</h3>
+              <p>amarlos es un privilegio.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="assets/img/img3.png" alt="Tercera slide">
+            <div class="carousel-caption">
+              <h3>Mascotas</h3>
+              <p>Si el amor tuviera un sonido sería el ronroneo o un ladrido.</p>
+            </div>
+            
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="assets/img/img4.png" alt="Cuarta slide">
+            <div class="carousel-caption">
+              <h3>Mascotas</h3>
+              <p>No sabemos nada realmente del amor si no queremos a los animales.</p>
+            </div>
+          </div>
+        </div>
+        
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+       
+      </div>
+    
+     
+
+      <h1>Mascotas</h1>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+        Nueva
+      </button>
+      
+    </div>
+    <table class="table table-striped table-hover">
+  
+      <thead classs = " thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Tipo</th>
+          <th scope="col">Sexo</th>
+          <th scope="col">Peso</th>
+          <th scope="col">Raza</th>
+          <th scope="col">Color</th>
+          <th scope="col">Edad</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Dueño</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody id="lista-mascotas">
+        
+      </tbody>
+    </table>
+  
+</div>
+
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Nueva Mascota</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <form id="form">
+          <input type="hidden" id="indice" > 
+          <div class="form-row">
+          <div class="col">
+            <select id="tipo" class="form-control" >
+              <option>Tipo animal</option>
+              <option>perro</option>
+              <option>gato</option>
+              <option>pajaro</option>
+              <option>vaca</option>
+              <option>cerdo</option>
+              <option>otro</option>
+            </select>
+          </div>
+        </div>
+        
+        <form id="form">
+          <input type="hidden" id="indice" > 
+          <div class="form-row">
+          <div class="col">
+            <select id="sexo" class="form-control" >
+              <option>Sexo</option>
+              <option>macho</option>
+              <option>hembra</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col">
+            <input type="text" id="peso" name="peso" class="form-control" placeholder="peso">
+          </div>
+          <div class="col">
+            <input type="text" id="raza" name="raza" class="form-control"  placeholder="raza">
+          </div>
+          <div class="col">
+            <input type="text" id="color" name="color" class="form-control"  placeholder="color">
+          </div>
+          <div class="col">
+            <input type="text" id="edad" name="edad" class="form-control"  placeholder="edad">
+          </div>
+        </div>
+
+          <div class="form-row">
+            <div class="col">
+              <input type="text" id="nombre" name="nombre" class="form-control" placeholder="nombre">
+            </div>
+            <div class="col">
+              <input type="text" id="dueno" name="dueno" class="form-control"  placeholder="dueño">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" id="btn-guardar" >Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/v4-shims.js"></script>
+    <script src="js/mascotas.js"></script> 
+
+   
+  </body>
+</html>
