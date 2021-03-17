@@ -18,7 +18,7 @@ let duenos =[
         ciudad: "bogota",
         barrio: "normandia",
         direccion: "calle 15 a n 1-65",
-        telefono: "3003456789500",
+        telefono: "3003456781",
         nombre: "cristian",
         apellido: "aponte"
         
