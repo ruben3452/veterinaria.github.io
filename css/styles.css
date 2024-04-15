@@ -42,3 +42,15 @@
     .table-wrapper-scroll-y {
     display: block;
     }
+
+    .form-control{
+        margin: 5px;
+    }
+
+    .mb-1{
+        margin-left: 25px;
+    }
+
+    .d-block{
+        margin-left: 15px;
+    }
