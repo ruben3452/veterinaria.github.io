@@ -54,3 +54,10 @@
     .d-block{
         margin-left: 15px;
     }
+
+    .card {
+        border-color: white;
+      }
+      .card-text{
+        text-align: justify;
+      }
