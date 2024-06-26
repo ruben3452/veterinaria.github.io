@@ -22,6 +22,11 @@ let consultas =[
     }
 ];
 
+
+var d = new Date();
+var date = d.getDate() + '/' + (d.getMonth() + 1 ) + '/' + d.getUTCFullYear() + ' - ' + d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
+
+
 function listarConsultas() {
     const htmlConsultas = consultas.map((consulta, index)=>`<tr>
     <th scope="row">${index}</th>
@@ -50,7 +55,7 @@ function enviarDatos(evento) {
     veterinaria: veterinaria.value,
     historia: historia.value,
     diagnostico: diagnostico.value,
-    creado: creado.value,
+    creado: date,
     editado: editado.value
   };
   const accion = btnGuardar.innerHTML;
@@ -65,6 +70,7 @@ function enviarDatos(evento) {
   
   listarConsultas();
   resetModal();
+  
 }
 
 function editar(index) {
@@ -77,7 +83,7 @@ function editar(index) {
     historia.value = consulta.historia;
     diagnostico.value = consulta.diagnostico;
     creado.value = consulta.creado;
-    editado.value = consulta.editado;
+    editado.value = date;
     indice.value = index;
   }
 } 
@@ -101,6 +107,7 @@ function eliminar(index) {
 }
 
 listarConsultas();
+
 
 form.onsubmit = enviarDatos;
 btnGuardar.onclick = enviarDatos;
